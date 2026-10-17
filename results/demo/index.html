@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Unmix the Signal — Listening Demo</title>
+  <style>
+    :root{color-scheme:dark;--ink:#e5e7eb;--muted:#94a3b8;--card:#172033;--accent:#34d399}
+    *{box-sizing:border-box}body{margin:0;font:16px system-ui;background:#08111f;color:var(--ink)}
+    main{max-width:960px;margin:auto;padding:48px 20px}h1{font-size:clamp(2rem,6vw,4rem);margin:0}.tag{color:var(--accent)}
+    p{color:var(--muted);line-height:1.6}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:32px}
+    section{background:var(--card);padding:20px;border:1px solid #26354f;border-radius:16px}h2{font-size:1rem;margin-top:0}audio{width:100%;margin:6px 0 14px}
+    img{width:100%;border-radius:12px;margin-top:28px;background:white}.note{font-size:.9rem}
+  </style>
+</head>
+<body><main>
+  <div class="tag">Blind source separation • FastICA</div><h1>Unmix the Signal</h1>
+  <p>Three hidden sources are blended into three recordings. FastICA sees only the mixtures and reconstructs the independent signals.</p>
+  <div class="grid">
+    <section><h2>1. Speech-like source</h2><audio controls src="../audio/original_speech_like.wav"></audio><h2>Recovered</h2><audio controls src="../audio/separated_speech_like.wav"></audio></section>
+    <section><h2>2. Music-like source</h2><audio controls src="../audio/original_music_like.wav"></audio><h2>Recovered</h2><audio controls src="../audio/separated_music_like.wav"></audio></section>
+    <section><h2>3. Percussion source</h2><audio controls src="../audio/original_percussion.wav"></audio><h2>Recovered</h2><audio controls src="../audio/separated_percussion.wav"></audio></section>
+  </div>
+  <img src="../separation_overview.png" alt="Original, mixed and separated waveforms">
+  <p class="note">Run <code>python run.py</code> to regenerate every audio file, plot and metric locally.</p>
+</main></body></html>
+
