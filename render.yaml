@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: unmix-the-signal
+    runtime: static
+    staticPublishPath: ./results
+    routes:
+      - type: rewrite
+        source: /
+        destination: /demo/index.html
