@@ -2,6 +2,7 @@ services:
   - type: web
     name: unmix-the-signal
     runtime: static
+    buildCommand: ":"
     staticPublishPath: ./results
     routes:
       - type: rewrite
